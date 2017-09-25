@@ -11,10 +11,6 @@ library(tidyr)
 
 df <- read.csv("C:/Users/User/Dropbox (Personal)/Personal/Courses/Excel2R/Dataframes/superstore.csv")
 write.csv(df, "superstore.csv")
-# just to be able to easily take a peak at the column names when you need to: 
-
-colnames <- colnames(df)
-colnames
 
 # with dplyr, pivoting data takes a very sql-like approach. let's say we wish to 
 # pivot so we see the total sales per product category, region and customer segment. 
@@ -30,6 +26,7 @@ colnames
 pivot <- df %>% 
   select(Product.Category, Region, Customer.Segment, Sales)
 
+head(pivot)
 # then group by
 
 pivot <- df %>% 
@@ -71,7 +68,7 @@ pivot <- df %>%
 
 head(pivot)
 
-# let's emulate an Excel pivoting, or a sql "crosstab", by spreading out the  regions to 
+# let's emulate an Excel pivoting, by spreading out the  regions to 
 # seperate columns. let's take the original pivot with just one metric, TotalSales:
 
   
