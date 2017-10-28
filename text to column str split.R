@@ -22,7 +22,6 @@ str_split("Android_Search_UK", "_") # splitting the text on underscore
 split <- str_split(campaigns$Campaign, "_")
 
 
-
 # take a look at the list: 
 
 split
@@ -39,7 +38,6 @@ campaigns$platform <- sapply(split, "[[", 2)
 campaigns$country <- sapply(split, "[[", 3)
 campaigns$startDate <- sapply(split, "[[", 4)
 campaigns$campaignType <- sapply(split, "[[", 5)
-
 
 
 # now add as new column: 
