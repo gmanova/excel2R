@@ -1,8 +1,10 @@
 # pre-session options
 
 rm(list = ls())
- #getwd()
- #setwd("C:\\Users\\User\\Documents")
+#getwd()
+#setwd("C:\\Users\\User\\Documents")
+
+#load Packages and data sets
 
 if (!require(dplyr)) install.packages('dplyr')
 library(dplyr)
