@@ -10,7 +10,7 @@ library(reshape2)
 
 # read in the sales dataset from this dropbox address and write the CSV to your machine:
 
-df <- read.csv("C:/Users/User/Dropbox (Personal)/Personal/Courses/Excel2R/Dataframes/territory_sales.csv")
+df <- read.csv("https://www.dropbox.com/s/q7tqy4d7cq1f67q/territory_sales.csv?dl=1")
 write.csv(df, "territory_sales.csv")
 
 

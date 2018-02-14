@@ -9,7 +9,7 @@ library(tidyr)
 
 # read in the Canadian SuperStore dataset from this dropbox address:
 
-df <- read.csv("C:/Users/User/Dropbox (Personal)/Personal/Courses/Excel2R/Dataframes/superstore.csv")
+df <- read.csv("https://www.dropbox.com/s/kj9yioc24iq4pdb/superstore.csv?dl=1")
 write.csv(df, "superstore.csv")
 
 # with dplyr, pivoting data takes a very sql-like approach. let's say we wish to 

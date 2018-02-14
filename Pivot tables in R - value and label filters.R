@@ -9,7 +9,7 @@ library(tidyr)
 
 # read in the Canadian SuperStore dataset from this dropbox address:
 
-df <- read.csv("C:/Users/User/Dropbox (Personal)/Personal/Courses/Excel2R/Dataframes/superstore.csv")
+df <- read.csv("https://www.dropbox.com/s/kj9yioc24iq4pdb/superstore.csv?dl=1")
 write.csv(df, "superstore.csv")
 
 
@@ -25,14 +25,16 @@ head(pivot2)
 
 
 
-# first, let's create a label filter emulating a WHERE clause, so only sales > 10000$ will
-# be taken into account: 
+# first, let's create a label filter emulating a WHERE clause, so only 
+#product category Furniture will be taken into account: 
 
 pivot2 <- df %>% 
   select(Product.Category, Region, Customer.Segment, Sales) %>%
   filter(Product.Category=="Furniture") %>% 
   group_by(Product.Category, Region, Customer.Segment) %>% 
   summarise(TotalSales = sum(Sales))
+
+head(pivot2)
 
 # same, but product category being EITHER Furniture OR Technology
 
@@ -41,6 +43,8 @@ pivot2 <- df %>%
   filter(Product.Category=="Furniture"|Product.Category=="Technology") %>% 
   group_by(Product.Category, Region, Customer.Segment) %>% 
   summarise(TotalSales = sum(Sales))
+
+head(pivot2)
 
 # same, but product category being Furniture AND customer segment being Consumer
 
