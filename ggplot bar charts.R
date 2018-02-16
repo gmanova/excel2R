@@ -54,12 +54,16 @@ str(df)
  
 # 3) create the base of your chart: data, x/y variables, sorting, and color
 
+# unsortd: 
+ 
  p<-ggplot(data=df1, aes(x=Order.Priority, 
                          y=TotalOrders,
                          fill = "red"
  ))
  p + geom_bar(stat = "identity")
  
+# if you want to sort first:  
+
  p<-ggplot(data=df1, aes(x=reorder(Order.Priority, -TotalOrders), 
                                    y=TotalOrders,
                                    fill = Order.Priority
